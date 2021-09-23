@@ -1,0 +1,30 @@
+﻿@model EmployeeManagementMVC.ViewModels.HomeDetailsViewModel
+
+
+<h3>@Model.PageTitle</h3>
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h3>@Model.Employee.Name</h3>
+            </div>
+            <div class="card-footer text-center">
+                <img class="card-img-top" src="~/user.jfif" style="width:400px;height:350px;" asp-append-version="true" />
+                <p>Name : @Model.Employee.Name</p>
+                <p>Email : @Model.Employee.Email </p>
+                <p>Name : @Model.Employee.Department </p>
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="index" class="btn btn-primary btn-sm">Back</a>
+                <a href="#" class="btn btn-info btn-sm">Edit</a>
+                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- use section script from Layout to load script file-->
+@section Scripts{
+    <!--<script src="~/js/EmployeeDetailScript.js"></script>-->
+}
